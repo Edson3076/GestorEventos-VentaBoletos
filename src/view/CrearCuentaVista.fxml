@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="489.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.CrearCuentaController">
+   <children>
+      <Label layoutX="110.0" layoutY="39.0" text="Nueva Cuenta" />
+      <Label layoutX="23.0" layoutY="87.0" text="Nombre" />
+      <Label layoutX="23.0" layoutY="130.0" text="Apellido" />
+      <Label layoutX="27.0" layoutY="167.0" text="Correo" />
+      <Label layoutX="18.0" layoutY="208.0" text="Confirmar Correo" />
+      <Label layoutX="22.0" layoutY="247.0" text="Telefono" />
+      <Button fx:id="btnCrear" layoutX="163.0" layoutY="294.0" mnemonicParsing="false" onAction="#crearUsuario" text="Crear" />
+      <Button fx:id="btnRegresar" layoutX="154.0" layoutY="336.0" mnemonicParsing="false" onAction="#Regresar" text="Regresar" />
+      <TextField layoutX="92.0" layoutY="83.0" prefHeight="25.0" prefWidth="238.0" promptText="Ingrese su nombre" />
+      <TextField layoutX="92.0" layoutY="126.0" prefHeight="25.0" prefWidth="238.0" promptText="Ingrese su apellido" />
+      <TextField layoutX="92.0" layoutY="163.0" prefHeight="25.0" prefWidth="238.0" promptText="Ingrese su correo electronico" />
+      <TextField layoutX="114.0" layoutY="204.0" prefHeight="25.0" prefWidth="238.0" promptText="Confirmar correo electronico" />
+      <TextField layoutX="92.0" layoutY="243.0" prefHeight="25.0" prefWidth="238.0" promptText="Ingrese su telefóno" />
+   </children>
+</AnchorPane>

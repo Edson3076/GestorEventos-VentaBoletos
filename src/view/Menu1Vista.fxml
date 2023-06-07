@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.Menu1VistaController">
+   <children>
+      <Label fx:id="Titulo" layoutX="93.0" layoutY="39.0" text="GESTOR DE EVENTOS Y COMPRA DE BOLETOS" textFill="#3e0c8d" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="272.0" layoutY="69.0" text="EMSA" />
+      <Button fx:id="btnEventos" layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#Eventos" text="Crear Evento" />
+      <Button fx:id="btnCartelera" layoutX="18.0" layoutY="361.0" mnemonicParsing="false" onAction="#Cartelera" text="Cartelera" />
+      <Button fx:id="btnLogin" layoutX="537.0" layoutY="86.0" mnemonicParsing="false" onAction="#Login" text="Login" />
+      <ImageView fitHeight="56.0" fitWidth="52.0" layoutX="534.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/umg.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

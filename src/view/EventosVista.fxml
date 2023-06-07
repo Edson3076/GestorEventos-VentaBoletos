@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.EventosController">
+   <children>
+      <Label alignment="CENTER" layoutX="272.0" layoutY="26.0" text="Crear Evento" />
+      <Label layoutX="82.0" layoutY="66.0" prefHeight="17.0" prefWidth="45.0" text="Nombre" />
+      <TextField fx:id="txtNombreEvento" layoutX="134.0" layoutY="62.0" promptText="Nombre evento" />
+      <Label layoutX="52.0" layoutY="97.0" text="Fechas Evento" />
+      <DatePicker fx:id="dateFecha" layoutX="134.0" layoutY="93.0" promptText="Fecha evento" />
+      <TextField fx:id="txtHoraInicio" layoutX="134.0" layoutY="126.0" promptText="Hora inicio" />
+      <Label layoutX="69.0" layoutY="130.0" text="Hora Inicio" />
+      <TextField fx:id="txtHoraFin" layoutX="352.0" layoutY="126.0" text="Hora fin" />
+      <Label layoutX="300.0" layoutY="130.0" text="Hora Fin" />
+      <TextField fx:id="txtSinopsis" layoutX="134.0" layoutY="159.0" promptText="Descripcion" />
+      <Label layoutX="83.0" layoutY="163.0" text="Sinopsis" />
+      <Label layoutX="51.0" layoutY="198.0" text="Precios Entrada" />
+      <TextField fx:id="txtResponsable" layoutX="134.0" layoutY="225.0" promptText="Creador evento" />
+      <Label layoutX="56.0" layoutY="229.0" text="Responsable" />
+      <Button fx:id="btnCrearEvento" layoutX="85.0" layoutY="301.0" mnemonicParsing="false" onAction="#CrearEvento" text="Crear Evento" />
+      <Button fx:id="btnRegresar" layoutX="177.0" layoutY="301.0" mnemonicParsing="false" onAction="#Regresar" text="Regresar" />
+      <Accordion layoutX="323.0" layoutY="178.0" />
+      <Button layoutX="134.0" layoutY="194.0" mnemonicParsing="false" text="Establecer precios" />
+      <Label layoutX="56.0" layoutY="269.0" text="Foto" />
+   </children>
+</AnchorPane>
