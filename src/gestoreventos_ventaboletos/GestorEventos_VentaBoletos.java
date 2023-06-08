@@ -4,18 +4,13 @@
  */
 package gestoreventos_ventaboletos;
 
+import controler.ConfirmarEventoController;
+
 /**
  *
  * @author HP
  */
 public class GestorEventos_VentaBoletos {
-    private String nombreEvento;
-    private String nombreResponsable;
-    Evento e = new Evento(nombreEvento,nombreResponsable);
     
-    public GestorEventos_VentaBoletos(String nombreEvento, String nombreResponsable) {
-        this.e = new Evento(nombreEvento,nombreResponsable);
-        //e.mostrar();
-    }
     
 }

@@ -29,24 +29,26 @@ public class ConfirmarEventoController implements Initializable {
     private EventosController eventosController;
     private Menu1VistaController menu1Vistacontroller;
     private Stage stage;
-    private DatePicker fechas;
+    
+    private String nombreEvento;
+    private String fecha;
+    private String horaInicio;
+    private String horaFin;
+    private String Sinopsis;
+    private String fechaDisponible;
+    private String horaDisponible;
+    private String fechaNoDisponible;
+    private String horaNoDisponible;
+    private String responsable;
+    private String vip_mg;
+    private String vip;
+    private String plateaA;
+    private String plateaB;
     
     @FXML
     private Button btnConfirmarEvento;
     @FXML
     private Button btnRegresar;
-    @FXML
-    private Label lblNombreEvento;
-    @FXML
-    private Label lblResponsable;
-    @FXML
-    private Label lblFecha;
-    @FXML
-    private Label lblHoraInicio;
-    @FXML
-    private Label lblHoraFin;
-    @FXML
-    private Label lblSinopsis;
 
     /**
      * Initializes the controller class.
@@ -58,9 +60,10 @@ public class ConfirmarEventoController implements Initializable {
 
     @FXML
     private void NuevoEvento(ActionEvent event) {
-//        Evento e = new Evento(lblNombreEvento.getText());
-//        e.mostrar();
-        GestorEventos_VentaBoletos e= new GestorEventos_VentaBoletos(lblNombreEvento.getText(),lblResponsable.getText());
+        Evento e = new Evento(nombreEvento,fecha,horaInicio,horaFin,Sinopsis,fechaDisponible,horaDisponible,fechaNoDisponible,
+                horaNoDisponible, responsable,vip_mg,vip,plateaA,plateaB);
+        e.mostrar();
+        //mandar el vento a la pagina principal
         eventosController.show();
         stage.close();
     }
@@ -71,19 +74,26 @@ public class ConfirmarEventoController implements Initializable {
         stage.close();
     }
 
-    void init(DatePicker fechas,String nombreEvento,String responsable,String HoraInicio,String HoraFin,String Sinopsis, Stage stage, EventosController eventosController) {
-        lblNombreEvento.setText(nombreEvento);
-        lblResponsable.setText(responsable);        
-        lblHoraInicio.setText(HoraInicio);
-        lblHoraFin.setText(HoraFin);
-        lblSinopsis.setText(Sinopsis);
+    public void ConfirmarEventoController(String nombreEvento,String fecha, String horaInicio,String horaFin,String Sinopsis,
+            String fechaDisponible, String horaDisponible, String fechaNoDisponible, String horaNoDisponible, String responsable,
+            String vip_mg, String vip, String plateaA,String plateaB,
+            Stage stage, EventosController eventosController) {
+        this.nombreEvento = nombreEvento;
+        this.fecha = fecha;
+        this.horaInicio =horaInicio;
+        this.horaFin = horaFin;
+        this.Sinopsis = Sinopsis;
+        this.fechaDisponible = fechaDisponible;
+        this.horaDisponible = horaDisponible;
+        this.fechaNoDisponible = fechaNoDisponible;
+        this.horaNoDisponible = horaNoDisponible;
+        this.responsable = responsable;
+        this.vip_mg = vip_mg;
+        this.vip = vip;
+        this.plateaA = plateaA;
+        this.plateaB = plateaB;
         this.eventosController = eventosController;
         this.stage = stage;
-    }
-    public void convertirFecha(){
-        LocalDate fechaSeleccionada = fechas.getValue();
-        String f = fechaSeleccionada.format(DateTimeFormatter.ofPattern("dd/mm/yyyy"));
-        System.out.println(f);
     }
     
 }
