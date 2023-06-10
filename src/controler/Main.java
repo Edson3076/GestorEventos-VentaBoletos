@@ -4,6 +4,7 @@
  */
 package controler;
 
+import gestoreventos_ventaboletos.Evento;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -44,11 +45,13 @@ public class Main extends Application {
             controlador.setStage(primarystage);
             primarystage.show();
             
-            //primarystage.show();
+            
             
         } catch (IOException e) {
             System.out.println(e.getMessage());;
         }
+        Evento evento = new Evento();
+        
     }
     
     //STOP

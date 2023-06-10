@@ -5,13 +5,18 @@
 package gestoreventos_ventaboletos;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.Queue;
 
 /**
  *
  * @author HP
  */
 public class Evento {
+    //atributos
     private String nombreEvento;
     private String fecha;
     private String horaInicio;
@@ -26,6 +31,8 @@ public class Evento {
     private String vip;
     private String plateaA;
     private String plateaB;
+    
+    ArrayList<Evento> listaEventos = new ArrayList<>();
 
     public Evento(String nombreEvento, String fecha, String horaInicio, String horaFin, String sinopsis, String fechaDisponible, 
             String horaDisponible, String fechaNoDisponible, String horaNoDisponible, String responsable, String vip_mg, String vip, String plateaA, String plateaB) {
@@ -44,9 +51,8 @@ public class Evento {
         this.plateaA = plateaA;
         this.plateaB = plateaB;
     }
-
-    
-    public Evento(){}
+    public Evento(){
+    }
     
     public void mostrar(){
         System.out.println("nombre: "+nombreEvento);
@@ -63,6 +69,10 @@ public class Evento {
         System.out.println("Precio vip: "+vip);
         System.out.println("precio plateaA: "+plateaA);
         System.out.println("Precio plateaB: "+plateaB);
-        
+    }
+
+    @Override
+    public String toString() {
+        return "nombreEvento=" + nombreEvento + " fecha=" + fecha + ", horaInicio=" + horaInicio + ", horaFin=" + horaFin + ", sinopsis=" + sinopsis + ", fechaDisponible=" + fechaDisponible + ", horaDisponible=" + horaDisponible + ", fechaNoDisponible=" + fechaNoDisponible + ", horaNoDisponible=" + horaNoDisponible + ", responsable=" + responsable + ", vip_mg=" + vip_mg + ", vip=" + vip + ", plateaA=" + plateaA + ", plateaB=" + plateaB + '}';
     }
 }

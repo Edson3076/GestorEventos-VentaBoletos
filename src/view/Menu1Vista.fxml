@@ -16,7 +16,7 @@
             <Font size="20.0" />
          </font></Label>
       <Label layoutX="272.0" layoutY="69.0" text="EMSA" />
-      <Button fx:id="btnEventos" layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#Eventos" text="Crear Evento" />
+      <Button fx:id="btnCrearEvento" layoutX="21.0" layoutY="86.0" mnemonicParsing="false" onAction="#Eventos" text="Crear Evento" />
       <Button fx:id="btnCartelera" layoutX="18.0" layoutY="361.0" mnemonicParsing="false" onAction="#Cartelera" text="Cartelera" />
       <Button fx:id="btnLogin" layoutX="537.0" layoutY="86.0" mnemonicParsing="false" onAction="#Login" text="Login" />
       <ImageView fitHeight="56.0" fitWidth="52.0" layoutX="534.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
@@ -24,5 +24,13 @@
             <Image url="@../imagenes/umg.png" />
          </image>
       </ImageView>
+      <TableView fx:id="tblEventos" layoutX="172.0" layoutY="119.0" prefHeight="210.0" prefWidth="347.0">
+        <columns>
+          <TableColumn fx:id="colEvento" prefWidth="87.0" text="Evento" />
+          <TableColumn fx:id="colFecha" prefWidth="63.0" text="Fecha" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEvento" layoutX="67.0" layoutY="224.0" mnemonicParsing="false" onAction="#agregarEvento" text="Agregar" />
+      <Button fx:id="btnComprar" layoutX="67.0" layoutY="262.0" mnemonicParsing="false" onAction="#comprarBoleto" text="Comprar" />
    </children>
 </AnchorPane>

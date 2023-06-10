@@ -4,11 +4,15 @@
  */
 package controler;
 
+import gestoreventos_ventaboletos.Evento;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +21,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -34,29 +41,91 @@ public class Menu1VistaController implements Initializable {
     private Stage stage;
     private TextField txtusuario;
     @FXML
-    private Button btnEventos;
-    @FXML
     private Button btnCartelera;
     @FXML
     private Button btnLogin;
+    @FXML
+    private TableView<Evento> tblEventos;
+    @FXML
+    private TableColumn colEvento;
+    @FXML
+    private Button btnCrearEvento;
+    @FXML
+    private TableColumn colFecha;
+    
+    private ObservableList<Evento> eventos;
+    private ConfirmarEventoController instancia = new ConfirmarEventoController();
+    private ArrayList<Evento> listaEventos;
+    
+    ArrayList<Evento> listaEvento;
+    @FXML
+    private Button btnEvento;
+    @FXML
+    private Button btnComprar;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
     }  
     
     public void setStage(Stage primaryStage){
         stage = primaryStage;
     }
 
-
     void show() {
         stage.show();
     }
+    
+    @FXML
+    public void agregarEvento(ActionEvent event) {
+//        ArrayList<Evento> listaE = instancia.getLista();
+//            for(Evento e: listaE){
+//            System.out.println(e.toString());
+//        }
 
+        
+    }
+    
 
+    @FXML
+    public void Eventos(ActionEvent event) {
+        try {
+            FXMLLoader loader= new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/view/EventosVista.fxml"));
+            Parent root = loader.load();
+            EventosController controlador = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            controlador.init(stage, this);
+            stage.show();
+            this.stage.close();
+        } catch (IOException ex) {
+            Logger.getLogger(LoginVistaController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+
+    @FXML
+    private void Login(ActionEvent event) {
+        try {
+            FXMLLoader loader= new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/view/LoginVista.fxml"));
+            Parent root = loader.load();
+            LoginVistaController controlador = loader.getController();
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            controlador.init(stage, this);
+            stage.show();
+            this.stage.close();
+        } catch (IOException ex) {
+            Logger.getLogger(LoginVistaController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
     @FXML
     private void Cartelera(ActionEvent event) {
         try {
@@ -76,12 +145,12 @@ public class Menu1VistaController implements Initializable {
     }
 
     @FXML
-    private void Eventos(ActionEvent event) {
+    private void comprarBoleto(ActionEvent event) {
         try {
             FXMLLoader loader= new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/view/EventosVista.fxml"));
+            loader.setLocation(Main.class.getResource("/view/ComprarBoletoVista.fxml"));
             Parent root = loader.load();
-            EventosController controlador = loader.getController();
+            ComprarBoletoController controlador = loader.getController();
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
@@ -93,22 +162,5 @@ public class Menu1VistaController implements Initializable {
         }
     }
 
-    @FXML
-    private void Login(ActionEvent event) {
-        try {
-            FXMLLoader loader= new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/view/LoginVista.fxml"));
-            Parent root = loader.load();
-            LoginVistaController controlador = loader.getController();
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            controlador.init(stage, this); 
-            stage.show();
-            this.stage.close();
-        } catch (IOException ex) {
-            Logger.getLogger(LoginVistaController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     
 }

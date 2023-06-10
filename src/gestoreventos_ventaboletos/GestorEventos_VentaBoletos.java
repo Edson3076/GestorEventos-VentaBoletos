@@ -11,6 +11,12 @@ import controler.ConfirmarEventoController;
  * @author HP
  */
 public class GestorEventos_VentaBoletos {
+    Evento evento = new Evento();
+
+    //constructor:
+    public GestorEventos_VentaBoletos() {
+        this.evento = new Evento();
+    }
     
     
 }

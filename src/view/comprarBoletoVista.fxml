@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controler.ComprarBoletoController">
+   <children>
+      <Label layoutX="263.0" layoutY="29.0" text="Comprar Boletos" />
+      <ImageView fitHeight="214.0" fitWidth="403.0" layoutX="151.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/escenario.JPG" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="82.0" text="VIP + M&amp;G:" />
+      <Label fx:id="lblVip_mg" layoutX="80.0" layoutY="82.0" text="l" />
+      <Label fx:id="lblVip" layoutX="80.0" layoutY="114.0" text="l" />
+      <Label layoutX="25.0" layoutY="114.0" text="VIP:" />
+      <Label fx:id="lblPlateaA" layoutX="80.0" layoutY="148.0" text="l" />
+      <Label layoutX="25.0" layoutY="148.0" text="Platea A:" />
+      <Label fx:id="lblPlateaB" layoutX="80.0" layoutY="183.0" text="l" />
+      <Label layoutX="25.0" layoutY="183.0" text="Platea B:" />
+      <Label layoutX="31.0" layoutY="280.0" text="Cantidad:" />
+      <TextField fx:id="txtCantidadBoletos" layoutX="83.0" layoutY="276.0" promptText="Maximo 10" />
+      <Label layoutX="369.0" layoutY="259.0" text="Asientos" />
+      <Button fx:id="btnRegresar" layoutX="300.0" layoutY="353.0" mnemonicParsing="false" onAction="#Regresar" text="cancelar" />
+      <Button layoutX="232.0" layoutY="353.0" mnemonicParsing="false" text="Comprar" />
+   </children>
+</AnchorPane>

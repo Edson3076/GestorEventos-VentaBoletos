@@ -13,6 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,6 +45,9 @@ public class EventosController implements Initializable {
     
     private Menu1VistaController menu1Vistacontroller;
     private PrecioBoletosController precioBoletosController;
+    private ConfirmarEventoController confirmarEventoController;
+    private Evento evento;
+    private ObservableList<Evento> eventos;
     private Stage stage;
     
     @FXML
@@ -81,6 +85,7 @@ public class EventosController implements Initializable {
     @FXML
     private TextField txtFechaNoDisponible;
     
+    
     /**
      * Initializes the controller class.
      */
@@ -99,10 +104,12 @@ public class EventosController implements Initializable {
             Scene scene = new Scene(root);
             Stage stage = new Stage();
             stage.setScene(scene);
-            controlador.ConfirmarEventoController(txtNombreEvento.getText(),txtFecha.getText(), txtHoraInicio.getText(),txtHoraFin.getText(),
+            //controlador.init2(stage, this);
+            controlador.init1(txtNombreEvento.getText(),txtFecha.getText(), txtHoraInicio.getText(),txtHoraFin.getText(),
                     txtSinopsis.getText(),txtFechaDisponible.getText(),txtHoraDisponible.getText(),txtFechaNoDisponible.getText(),
                     txtHoraNoDisponible.getText(),txtResponsable.getText(),lblVIP_MG.getText(),lblVIP.getText(),lblPlateaA.getText(),lblPlateaB.getText(),
                     stage, this);
+            String nombreEvento = txtNombreEvento.getText();
             stage.show();
             this.stage.close();
         } catch (IOException ex) {
