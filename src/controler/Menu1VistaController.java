@@ -148,7 +148,7 @@ public class Menu1VistaController implements Initializable {
     private void comprarBoleto(ActionEvent event) {
         try {
             FXMLLoader loader= new FXMLLoader();
-            loader.setLocation(Main.class.getResource("/view/ComprarBoletoVista.fxml"));
+            loader.setLocation(Main.class.getResource("/view/comprarBoletoVista.fxml"));
             Parent root = loader.load();
             ComprarBoletoController controlador = loader.getController();
             Scene scene = new Scene(root);
