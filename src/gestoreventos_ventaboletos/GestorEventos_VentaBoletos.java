@@ -12,6 +12,7 @@ import controler.ConfirmarEventoController;
  */
 public class GestorEventos_VentaBoletos {
     Evento evento = new Evento();
+    Comprador comprador = new Comprador();
 
     //constructor:
     public GestorEventos_VentaBoletos() {

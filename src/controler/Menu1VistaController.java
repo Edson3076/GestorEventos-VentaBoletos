@@ -59,8 +59,6 @@ public class Menu1VistaController implements Initializable {
     
     ArrayList<Evento> listaEvento;
     @FXML
-    private Button btnEvento;
-    @FXML
     private Button btnComprar;
     
     /**
@@ -78,7 +76,6 @@ public class Menu1VistaController implements Initializable {
         stage.show();
     }
     
-    @FXML
     public void agregarEvento(ActionEvent event) {
 //        ArrayList<Evento> listaE = instancia.getLista();
 //            for(Evento e: listaE){

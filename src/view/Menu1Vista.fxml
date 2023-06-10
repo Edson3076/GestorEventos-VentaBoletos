@@ -24,13 +24,12 @@
             <Image url="@../imagenes/umg.png" />
          </image>
       </ImageView>
-      <TableView fx:id="tblEventos" layoutX="172.0" layoutY="119.0" prefHeight="210.0" prefWidth="347.0">
+      <TableView fx:id="tblEventos" layoutX="139.0" layoutY="99.0" prefHeight="210.0" prefWidth="347.0">
         <columns>
           <TableColumn fx:id="colEvento" prefWidth="87.0" text="Evento" />
           <TableColumn fx:id="colFecha" prefWidth="63.0" text="Fecha" />
         </columns>
       </TableView>
-      <Button fx:id="btnEvento" layoutX="67.0" layoutY="224.0" mnemonicParsing="false" onAction="#agregarEvento" text="Agregar" />
-      <Button fx:id="btnComprar" layoutX="67.0" layoutY="262.0" mnemonicParsing="false" onAction="#comprarBoleto" text="Comprar" />
+      <Button fx:id="btnComprar" layoutX="272.0" layoutY="349.0" mnemonicParsing="false" onAction="#comprarBoleto" text="Comprar" />
    </children>
 </AnchorPane>
